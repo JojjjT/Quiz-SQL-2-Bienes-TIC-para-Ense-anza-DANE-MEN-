@@ -6,21 +6,6 @@ Repositorio con los scripts SQL y resultados del Quiz SQL 2, desarrollado sobre 
 
 ## 📂 Estructura del repositorio
 
-```
-quiz-sql-tic-men/
-│
-├── queries_quiz_sql2.sql        # Scripts SQL de todos los puntos
-│
-├── Resultado_1_punto_1A.csv     # Punto 1A: todos los registros de tic_2023
-├── Resultado_2_punto_1B.csv     # Punto 1B: actividades distintas en tic_2023
-├── Resultado_punto_2.csv        # Punto 2: exploración básica de tic_2022
-├── Resultado_punto_4.csv        # Punto 4: sedes por departamento con actividad '05'
-├── Resultado_punto_5.csv        # Punto 5: comparación 2022 vs 2023 por sede
-│
-└── README.md
-```
-
----
 
 ## 🗃️ Dataset
 
