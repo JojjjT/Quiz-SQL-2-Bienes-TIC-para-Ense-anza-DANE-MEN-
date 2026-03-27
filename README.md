@@ -4,8 +4,6 @@ Repositorio con los scripts SQL y resultados del Quiz SQL 2, desarrollado sobre 
 
 ---
 
-## 📂 Estructura del repositorio
-
 
 ## 🗃️ Dataset
 
@@ -90,7 +88,7 @@ CREATE TABLE tic_sedes_resumen (
     anio              INTEGER NOT NULL,
     Total_actividades INTEGER,
     Tiene_internet    BOOLEAN,
-    Fecha_carga       DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Fecha_carga       DATETIME CURRENT_TIMESTAMP,
     CONSTRAINT uq_sede_anio UNIQUE (sede_codigo, anio)
 );
 ```
@@ -125,9 +123,9 @@ Para cada sede presente en ambos años, se calcula el total de actividades TIC r
 ```sql
 SELECT
     a.sede_codigo                          AS codigo_sede,
-    a.total_act_2022,
-    b.total_act_2023,
-    b.total_act_2023 - a.total_act_2022   AS diferencia,
+    count(a.actividad_id) AS total_act_2022,
+    count(b.actividas_id) AS total_act_2023,
+    total_act_2023 - total_act_2022   AS diferencia,
     CASE
         WHEN b.total_act_2023 - a.total_act_2022 > 0 THEN 'CRECIÓ'
         WHEN b.total_act_2023 - a.total_act_2022 < 0 THEN 'DECRECIÓ'
